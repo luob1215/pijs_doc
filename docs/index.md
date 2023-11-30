@@ -1,11 +1,15 @@
 ## PIJS
 
-pijs是一个可以执行JavaScript和TypeScript的应用程序，底层由RUST语言开发。
+pijs是一个可以执行JavaScript和TypeScript的应用程序，底层由RUST+V8虚拟机实现。
 
 - 特性
     - 支持npm包管理
     - 可直接加载ts代码
+    - 支持网络加载代码(http://url/demo.ts)
     - 多线程多虚拟机结构，提升迸发性能
+    - 支持控制台，可在控制台中直接执行js代码
+    - 支持进程管理工具，方便在指定的虚拟机中创建pid
+    - 支持pid与pid之间消息发送接收
 
 启动:
 ```
