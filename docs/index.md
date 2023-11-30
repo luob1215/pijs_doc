@@ -6,7 +6,6 @@ pijs是一个可以执行JavaScript和TypeScript的应用程序，底层由RUST�
     - 支持npm包管理
     - 可直接加载ts代码
     - 多线程多虚拟机结构，提升迸发性能
-    - TODO
 
 启动:
 ```

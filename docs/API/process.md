@@ -1,4 +1,4 @@
-# 进程管理
+# Process
 
 ## ESProcess
 ### ESProcess.spawn
