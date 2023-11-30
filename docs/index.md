@@ -1,4 +1,4 @@
-## PIJS 介绍
+## PIJS
 
 pijs是一个可以执行JavaScript和TypeScript的应用程序，底层由RUST语言开发。
 
