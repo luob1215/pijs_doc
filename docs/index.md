@@ -2,29 +2,37 @@
 
 pijs是一个可以执行JavaScript和TypeScript的应用程序，底层由RUST+V8虚拟机实现。
 
-- 特性
-    - 支持npm包管理
-    - 可直接加载ts代码
-    - 支持网络加载代码(http://url/demo.ts)
-    - 多线程多虚拟机结构，提升迸发性能
-    - 支持控制台，可在控制台中直接执行js代码
-    - 支持进程管理工具，方便在指定的虚拟机中创建pid
-    - 支持pid与pid之间消息发送接收
+
+- 支持npm包管理
+- 可直接加载ts代码
+- 支持网络加载代码(http://url/demo.ts)
+- 多线程多虚拟机结构，提升迸发性能
+- 支持控制台，可在控制台中直接执行js代码
+- 支持进程管理工具，方便在指定的虚拟机中创建pid
+- 支持pid与pid之间消息发送接收
+
+安装: 
+```
+npm install -g pi_ptjs --registry http://192.168.31.241:4873/
+或
+curl -fsSL http://ser.yinengyun.com:10082/tech/pijs/-/raw/master/tools/install.sh | bash
+```
 
 启动:
 ```
-PIjs helloworld.ts // 支持ts、js、url 
+pijs helloworld.ts // 支持ts、js、url 
 ```
 
-启动控制台模式 -C
+启动控制台 -C
 
 ```
-PIjs test.ts -C // 控制台中可以直接运行JavaScript语法，同时也可以使用require加载模块
+pijs test.ts -C // 控制台中可以直接运行JavaScript语法，同时也可以使用require加载模块
 ```
 
-更多参数
+帮助
 
 ```
+pijs --help
 USAGE:
     PIjs.exe [FLAGS] [OPTIONS] [script]
 
