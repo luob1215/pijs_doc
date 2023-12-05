@@ -1,3 +1,4 @@
+# quickstart
 # Hello World
 ```TypeScript
 console.log("Hello World");
@@ -58,6 +59,35 @@ app.post('/api/upload', upload.single('f'), (req, res, next) => {
 });
 
 app.listen(80);
+```
+
+## Mysql
+
+```JavaScript
+var mysql = require('mysql');
+
+
+var connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'test',
+  password: '123456',
+  database: 'test'
+});
+
+// globalThis.mysql = connection;
+
+connection.connect(function () {
+  console.log("连接状态：", connection.state);
+
+  connection.query('SELECT * from tab1', function (error, results, fields) {
+    console.log("连接状态222：", connection.state);
+    if (error) throw error;
+    console.log('The solution is: ', results, " fields:", fields);
+
+    connection.end();
+  });
+});
+
 ```
 
 ## 运行p2p

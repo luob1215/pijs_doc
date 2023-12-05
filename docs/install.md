@@ -7,17 +7,17 @@ PIjs是一个可执行文件，可以采用以下几种方式安装
 curl 安装
 
 ```
-curl -fsSL https://github/pijs/install | bash
+curl -fsSL http://ser.yinengyun.com:10082/tech/pijs/-/raw/master/tools/install.sh | bash
 ```
 
 ### windows and linux
 npm 安装
 
 ```
-npm install -g pijs
+npm install -g pi_ptjs --registry http://192.168.31.241:4873/
 ```
 
-### Dokcer
+### Dokcer TODO
 
 ```
 docker pull xxx/pijs
