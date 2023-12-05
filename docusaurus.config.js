@@ -13,14 +13,14 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'http://doc.gaia.world/',
+  url: 'http://doc.gaia.world',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'pijs', // Usually your GitHub org/user name.
+  organizationName: 'GaiaWorld', // Usually your GitHub org/user name.
   projectName: 'pijs_doc', // Usually your repo name.
 
   onBrokenLinks: 'throw',
