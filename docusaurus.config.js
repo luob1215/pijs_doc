@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'pijsdoc',
+  title: 'pijs',
   tagline: '',
   favicon: 'img/favicon.ico',
 
@@ -16,7 +16,7 @@ const config = {
   url: 'http://doc.gaia.world',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/pijs_doc/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
