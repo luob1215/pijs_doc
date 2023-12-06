@@ -1,11 +1,17 @@
 # quickstart
+
+# 安装
+```
+npm install -g pi_ptjs --registry http://192.168.31.241:4873/
+```
+
 # Hello World
 ```TypeScript
 console.log("Hello World");
 ```
 运行：
 ```
-PIjs helloworld.ts
+pijs helloworld.ts
 ```
 
 # 运行WebServer

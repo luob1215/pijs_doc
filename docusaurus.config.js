@@ -105,6 +105,7 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+  themes: ['@docusaurus/theme-live-codeblock'],
 };
 
 export default config;
