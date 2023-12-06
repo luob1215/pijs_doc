@@ -4,23 +4,23 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'pijs',
+  title: 'docs',
   tagline: '',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://doc.gaia.world',
+  url: 'http://doc.gaia.world/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'GaiaWorld', // Usually your GitHub org/user name.
+  organizationName: 'pijs', // Usually your GitHub org/user name.
   projectName: 'pijs_doc', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -66,16 +66,21 @@ const config = {
       // Replace with your project's social card
       // image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'PiJs',
+        title: 'Docs',
         // logo: {
         //   alt: 'My Site Logo',
         //   src: 'img/logo.svg',
         // },
         items: [
-          {to: 'docs/', label: 'Docs'},
-          {to: 'docs/API/', label: 'API'},
           {
-            href: 'https://github.com/GaiaWorld/pijs_doc',
+            label: 'PiJs',
+            items: [
+              { to: 'docs/pijs/', label: 'Docs' },
+              { to: 'docs/pijs/API/', label: 'API' },
+            ]
+          },
+          {
+            href: 'https://github.com/GaiaWorld/docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -85,15 +90,15 @@ const config = {
         style: 'light',
         links: [
           {
-            title: 'Docs',
+            title: 'PiJs',
             items: [
               {
                 label: 'docs',
-                to: '/docs',
+                to: '/docs/pijs',
               },
               {
                 label: 'API',
-                to: '/docs/API',
+                to: '/docs/pijs/API',
               },
             ],
           }
