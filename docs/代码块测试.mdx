@@ -1,0 +1,97 @@
+```jsx live
+function Clock(props) {
+  const [date, setDate] = useState(new Date());
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 1000);
+
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
+
+  function tick() {
+    setDate(new Date());
+  }
+
+  return (
+    <div>
+      <h2>It is {date.toLocaleTimeString()}.</h2>
+    </div>
+  );
+}
+```
+
+```jsx live noInline
+const project = 'Docusaurus';
+
+const Greeting = () => <p>Hello {project}!</p>;
+
+render(<Greeting />);
+```
+
+## stackblitz 代码在线执行
+```html title="index.html"
+<script type="module">
+  import sdk from 'https://unpkg.com/@stackblitz/sdk@1/bundles/sdk.m.js';
+  let vm = null;
+
+  const project = {
+    title: 'Dynamically Generated Project',
+    description: 'Created with <3 by the StackBlitz SDK!',
+    template: 'javascript',
+    files: {
+      'index.html': `<div id="output"></div>`,
+      'index.js':
+        `
+import { format, formatDistance, formatRelative, subDays } from 'date-fns';
+
+const examples = [
+  format(new Date(), "'Today is a' eeee"),
+  formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true }),
+  formatRelative(subDays(new Date(), 3), new Date()),
+];
+
+document.getElementById('output').innerHTML = examples
+  .map((result) => \`<samp>\${result}</samp>\`)
+  .join('<br>');
+`,
+'package.json': `{
+  "name": "sdk-vm",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "date-fns": "^2.30.0"
+  }
+}`
+},
+    settings: {
+      compile: { clearConsole: false },
+    },
+  };
+
+  async function embedProject() {
+    vm = await sdk.embedProject('embed', project, {
+      openFile: 'index.js',
+      view: 'both',
+    });
+
+    // Enable buttons that require the VM
+    // for (const button of document.querySelectorAll < HTMLButtonElement > (
+    //   'button:disabled'
+    // )) {
+    //   button.disabled = false;
+    // }
+  }
+  window.demo = {
+    embedProject,
+  };
+
+
+</script>
+
+<button onclick="demo.embedProject()">Embed project</button>
+
+<div id="embed" style="height: 100%;width: 100%;">
+  <p>Embed will go here</p>
+</div>
+```
